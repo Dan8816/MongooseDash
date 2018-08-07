@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!--<div class="navbar-header">
+                <a class="navbar-brand" href="/">Mongoose Dashboard</a>
+            </div>-->
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/dogs/new">Add a dog</a></li>
+                    <li><a href="https://www.google.com">Google</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Dog">Canine Information</a></li>
+                </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>This is collection of our dogs</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Get Info</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% for (var i in dogs) { %>
+                <tr>
+                    <td><%= dogs[i].name %></td>
+                    <td><%= dogs[i].type %></td>
+                    <td><%= dogs[i].age %></td>
+                    <td><%= dogs[i].gender %></td>
+                    <td><a href="/<%= dogs[i].id %>">See more info</a></td>
+                    <td><a href="destroy/<%= dogs[i].id %>">Euthanize</a></td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>  
+</body>
+</html>

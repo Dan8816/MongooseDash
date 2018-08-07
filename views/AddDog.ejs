@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add a Dog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <div class="navbar-header">
+                <a class="navbar-brand" href="/">Mongoose Dashboard</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <!--<li class="active"><a href="/dogs/new">Add a dog</a></li>-->
+                <li><a href="https://www.google.com">Google</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Dog">Canine Information</a></li>
+            </ul>
+        </div>
+    </nav>
+    <form class="form-horizontal" action="/dogs" method="post">
+        <div class="form-group" style="width: 30%;">
+          <label class="control-label col-sm-2" for="name">Name:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+          </div>
+        </div>
+        <div class="form-group" style="width: 30%;">
+          <label class="control-label col-sm-2" for="type">Type:</label>
+          <div class="col-sm-10"> 
+            <input type="text" class="form-control" id="type" placeholder="Enter breed or close estimate e.g. cocker-poodle" name="type">
+          </div>
+        </div>
+        <div class="form-group" style="width: 30%;" >
+            <label class="control-label col-sm-2" for="age">Age:</label>
+            <div class="col-sm-10"> 
+                <input type="number" class="form-control" id="age" name="age">
+            </div>
+        </div>
+        <div class="form-group" style="width: 30%;">
+            <label class="control-label col-sm-2" for="gender">Gender:</label>
+            <div class="col-sm-10"> 
+                <input type="text" class="form-control" id="gender" placeholder="We're flexible here...X if that is a thing" name="gender">
+            </div>
+        </div>
+        <div class="form-group" style="width: 30%;">
+            <label class="control-label col-sm-2" for="desc">Description:</label>
+            <div class="col-sm-10"> 
+                <input type="textarea" class="form-control" id="desc" placeholder="Tell us a brief description" name="desc">
+            </div>
+        </div>
+        <div class="form-group"> 
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Add Dog</button>
+          </div>
+        </div>
+    </form>
+</body>
+</html>
